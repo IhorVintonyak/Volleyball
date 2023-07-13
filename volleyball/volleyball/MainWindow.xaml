@@ -5,9 +5,65 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:volleyball"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="833" Width="674">
     <Grid>
-        <TextBlock HorizontalAlignment="Center" Text="Hello World" VerticalAlignment="Center" FontSize="55"/>
+        <!--<TextBlock HorizontalAlignment="Center" Text="Hello World" VerticalAlignment="Center" FontSize="55"/>-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="0.2*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.23*" />
+            <RowDefinition Height="0.22*" />
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.22*" />
+            <RowDefinition Height="0.23*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Grid.Column="0" Background="Orange" />
+        <Border Grid.Row="0" Grid.Column="1" Background="Orange" />
+        <Border Grid.Row="0" Grid.Column="2" Background="Orange" />
+        <Border Grid.Row="1" Grid.Column="0" Background="Orange" />
+        <Border Grid.Row="1" Grid.Column="1" Background="Orange" />
+        <Border Grid.Row="1" Grid.Column="2" Background="Orange" />
 
+        <Border Grid.Row="2" Grid.Column="0" Background="Gray" />
+        <Border Grid.Row="2" Grid.Column="1" Background="Gray" />
+        <Border Grid.Row="2" Grid.Column="2" Background="Gray" />
+
+        <Border Grid.Row="3" Grid.Column="0"  Background="Yellow" />
+        <Border Grid.Row="3" Grid.Column="1"  Background="Yellow" />
+        <Border Grid.Row="3" Grid.Column="2"  Background="Yellow" />
+        <Border Grid.Row="4" Grid.Column="0"  Background="Yellow" />
+        <Border Grid.Row="4" Grid.Column="1"  Background="Yellow" />
+        <Border Grid.Row="4" Grid.Column="2"  Background="Yellow" />
+
+        <!--https://www.pixilart.com/draw?ref=home-page /-->
+        <Image Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\Player 1 Black.png" Grid.Row="0" Grid.Column="0"/>
+        <Image Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\Player 2 Black.png" Grid.Row="0" Grid.Column="2"/>
+        <Image Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\Player 3 Black.png" Grid.Row="1" Grid.Column="1"/>
+
+        <Image Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\Player 3 Blue.png" Grid.Row="3" Grid.Column="1"/>
+        <Image Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\Player 2 Blue.png" Grid.Row="4" Grid.Column="0"/>
+        <Image Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\Player 1 Blue.png" Grid.Row="4" Grid.Column="2"/>
+
+        <Image Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\ball.png" Grid.Row="4" Grid.Column="2" Width="50" Margin="20,20,20,100"/>
+        
+        <Polygon Points="75,0 15,90 135,90"
+         Fill="Yellow"
+         Stroke="Black"
+         Grid.Row="1" 
+         Grid.Column="3"
+         HorizontalAlignment="Center"
+         VerticalAlignment="Center">
+        </Polygon>
+        <TextBlock Text="SERVE" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="4" FontSize="30"/>
+
+        <Button Grid.Column="3" Grid.Row="2" FontSize="30" Margin="20,0">1</Button>
+        <Button Grid.Column="4" Grid.Row="2" FontSize="30" Margin="20,0">2</Button>
+
+        <Button Grid.Column="3"  Grid.Row="3" FontSize="30" Margin="0,0,-130,0" Height="100px" Width="100">GO</Button>
     </Grid>
 </Window>
