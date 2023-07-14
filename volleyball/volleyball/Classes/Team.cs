@@ -19,7 +19,7 @@ namespace volleyball.Classes
 
         public Team(Player player)
         {
-            this.roster = new Player[] { player, player, player, player, player, player };
+            this.roster = new Player[] { player, player, player};
         }
 
         public int Points { get => points; set => points = value; }
