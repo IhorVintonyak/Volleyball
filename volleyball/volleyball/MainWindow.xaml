@@ -49,9 +49,9 @@
         <Image Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\Player 2 Blue.png" Grid.Row="4" Grid.Column="0"/>
         <Image Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\Player 1 Blue.png" Grid.Row="4" Grid.Column="2"/>
 
-        <Image Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\ball.png" Grid.Row="4" Grid.Column="2" Width="50" Margin="20,20,20,100"/>
+        <Image Name="ball" Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\ball.png" Grid.Row="4" Grid.Column="2" Width="50" Margin="20,20,20,100"/>
         
-        <Polygon Points="75,0 15,90 135,90"
+        <Polygon Name="pgFigure" Points="75,0 15,90 135,90"
          Fill="Yellow"
          Stroke="Black"
          Grid.Row="1" 
@@ -59,11 +59,11 @@
          HorizontalAlignment="Center"
          VerticalAlignment="Center">
         </Polygon>
-        <TextBlock Text="SERVE" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="4" FontSize="30"/>
+        <TextBlock Name="txtblNameAction" Text="SERVE" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="4" FontSize="30"/>
 
-        <Button Grid.Column="3" Grid.Row="2" FontSize="30" Margin="20,0">1</Button>
-        <Button Grid.Column="4" Grid.Row="2" FontSize="30" Margin="20,0">2</Button>
+        <Button Name="btn1" Grid.Column="3" Grid.Row="2" FontSize="30" Margin="20,0" Click="btn1_Click">1</Button>
+        <Button Name="btn2" Grid.Column="4" Grid.Row="2" FontSize="30" Margin="20,0" Click="btn2_Click">2</Button>
 
-        <Button Grid.Column="3"  Grid.Row="3" FontSize="30" Margin="0,0,-130,0" Height="100px" Width="100">GO</Button>
+        <Button x:Name="btnGo" Grid.Column="3"  Grid.Row="3" FontSize="30" Margin="0,0,-130,0" Height="100px" Width="100" Click="btnGo_Click">GO</Button>
     </Grid>
 </Window>
