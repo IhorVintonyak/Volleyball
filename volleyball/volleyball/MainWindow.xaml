@@ -46,24 +46,42 @@
         <Image Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\Player 3 Black.png" Grid.Row="1" Grid.Column="1"/>
 
         <Image Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\Player 3 Blue.png" Grid.Row="3" Grid.Column="1"/>
-        <Image Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\Player 2 Blue.png" Grid.Row="4" Grid.Column="0"/>
+        <Image Name="Player2Blue" Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\Player 2 Blue.png" Grid.Row="4" Grid.Column="0" />
         <Image Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\Player 1 Blue.png" Grid.Row="4" Grid.Column="2"/>
 
         <Image Name="ball" Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\ball.png" Grid.Row="4" Grid.Column="2" Width="50" Margin="20,20,20,100"/>
+
+        <Image Name="imgConfiguration" Source="D:\zz\GITHUB\Volleyball\volleyball\volleyball\img\yellowServe.png" Grid.Row="0" Grid.Column="3" />
         
-        <Polygon Name="pgFigure" Points="75,0 15,90 135,90"
-         Fill="Yellow"
-         Stroke="Black"
-         Grid.Row="1" 
-         Grid.Column="3"
-         HorizontalAlignment="Center"
-         VerticalAlignment="Center">
-        </Polygon>
-        <TextBlock Name="txtblNameAction" Text="SERVE" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="4" FontSize="30"/>
+        
+        <TextBlock Name="txtblNameAction" Text="SERVE" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="4" FontSize="30"/>
 
-        <Button Name="btn1" Grid.Column="3" Grid.Row="2" FontSize="30" Margin="20,0" Click="btn1_Click">1</Button>
-        <Button Name="btn2" Grid.Column="4" Grid.Row="2" FontSize="30" Margin="20,0" Click="btn2_Click">2</Button>
+        <Button Name="btn1Set" Grid.Column="3" Grid.Row="1" FontSize="30" Margin="20,0" Height="80" Width="80" VerticalAlignment="Bottom" Visibility="Hidden">1</Button>
+        <Button Name="btn2Set" Grid.Column="4" Grid.Row="1" FontSize="30" Margin="20,0" Height="80" Width="80" VerticalAlignment="Bottom" Visibility="Hidden">2</Button>
+        
+        
+        <Button Name="btn1Serve" Grid.Column="3" Grid.Row="2" FontSize="30" Margin="20,0" Click="btn1Serve_Click" >1</Button>
+        <Button Name="btn2Serve" Grid.Column="4" Grid.Row="2" FontSize="30" Margin="20,0" Click="btn2Serve_Click">2</Button>
 
-        <Button x:Name="btnGo" Grid.Column="3"  Grid.Row="3" FontSize="30" Margin="0,0,-130,0" Height="100px" Width="100" Click="btnGo_Click">GO</Button>
+
+        <Button Name="btn1Spike" Grid.Column="3" Grid.Row="3" FontSize="30" Margin="20,0" Height="80" Width="80" VerticalAlignment="Bottom"  Visibility="Hidden" >1</Button>
+        <Button Name="btn2Spike" Grid.Column="4" Grid.Row="3" FontSize="30" Margin="20,0" Height="80" Width="80" VerticalAlignment="Bottom"  Visibility="Hidden">2</Button>
+        
+        <Button x:Name="btnGo" Grid.Column="3"  Grid.Row="4" FontSize="30" Margin="0,0,-130,0" Height="100px" Width="100" Click="btnGo_Click">GO
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="MouseLeftButtonUp">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="Player2Blue"
+                                Storyboard.TargetProperty="(Grid.Column).(TranslateTransform.Y)"
+                                Duration="0:0:2"
+                                To="279">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
     </Grid>
 </Window>
